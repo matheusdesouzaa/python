@@ -224,14 +224,14 @@ def exibir_extrato(clientes):
 
     extrato = ""
     if not transacoes:
-        extrato = "Não foram realizadas movimentações"
+        extrato += "Não foram realizadas movimentações"
     else:
         for transacao in transacoes:
             extrato += f"\n{transacao["tipo"]}:\n\tR${transacao["valor"]:.2f}"
         
-        print(extrato)
-        print(f"\nSaldo:\t\t\tR${conta.saldo:.2f}")
-        print("============================================")
+    print(extrato)
+    print(f"\nSaldo:\t\t\tR${conta.saldo:.2f}")
+    print("============================================")
 
 def listar_contas(contas):
     for conta in contas:
